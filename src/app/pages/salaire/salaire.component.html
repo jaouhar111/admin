@@ -1,0 +1,43 @@
+<div class="flex flex-col">
+<div class="flex justify-center items-center max-w-xs mb-8">
+    <label for="underline_select" class="sr-only">Underline select</label>
+<select  id="underline_select" [(ngModel)]="selectedOption" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+    <option selected>Choisire Un Employee</option>
+    <option *ngFor="let item of employees" [ngValue]="item">{{item.name}}</option>
+    
+</select>
+</div>
+<p class="text-center font-semibold text-blue-400 text-lg ">Formulaire de paiement du salaire</p>
+<div class="grid grid-cols-4 px-4 py-4 bg-slate-200 gap-4">
+    <div class="">
+        Employee ID:{{selectedOption._id| slice:0:5}}
+    </div>
+    <div class="">
+        Profession:{{selectedOption.role}}
+    </div>
+    <div class="">
+        Employee Name: {{selectedOption.name}}
+    </div>
+    <div class="">
+        Father Name: {{selectedOption.father}}
+    </div>
+</div>
+<div class="flex flex-col-2 justify-center mt-4 gap-8">
+    <div class="flex flex-col">
+        
+          
+          
+    <div class="flex flex-col">
+        <div class="mb-6">
+            
+            <input type="number" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Montant du salaire" [value]="selectedOption.salaire">
+        </div> 
+        <div class="mb-6">
+           
+            <input type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Bonus" >
+        </div> 
+         
+
+    </div>
+</div>
+</div>

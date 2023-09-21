@@ -1,0 +1,55 @@
+<div class='flex w-full px-4 py-4 bg-gray-200 mb-5'>
+    <p class=''>Employee Information</p>
+    <p class='absolute right-0 pr-16'>[ *Required]</p>
+</div>
+<form (submit)="addUser()">
+<div class='grid grid-cols-3 gap-4'>
+<input type="text" [(ngModel)]="user.name"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Name of Employee' [ngModelOptions]=" 
+{standalone: true}"/>
+<input type="text" [(ngModel)]="user.mobile"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Mobile Number' [ngModelOptions]=" 
+{standalone: true}"
+/>
+<select [(ngModel)]="user.role" [ngModelOptions]=" {standalone: true}" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer">
+    <option selected>Type d'employé</option>
+    <option value="Professeur">Professeur</option>
+    <option value="personnel de direction">personnel de direction</option>
+    <option value="gérant de magasin">gérant de magasin</option>
+    <option value="comptable">comptable</option>
+</select>
+<input type="date" [(ngModel)]="user.dateN" [ngModelOptions]=" {standalone: true}"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder="joing date"
+ />
+<select [(ngModel)]="user.genre" [ngModelOptions]=" {standalone: true}" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer">
+    <option  selected>Gender</option>
+    <option value="Masculin">Masculin</option>
+    <option value="Feminin">Feminin</option>
+</select>
+<input type="text" [(ngModel)]="user.salaire" [ngModelOptions]=" {standalone: true}"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Salaire'
+/>
+<input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50  focus:outline-none "type="file"/>
+</div>
+<div class='flex w-full px-4 py-4 bg-gray-200 my-10'>
+    <p class=''>Other Info</p>
+    <p class='absolute right-0 pr-16'>[Optional]</p>
+</div>
+<div class='grid grid-cols-3 gap-4 '>
+<input type="text" [(ngModel)]="user.father" [ngModelOptions]="{standalone: true}" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Name of Father'
+/>
+<input type="text" [(ngModel)]="user.profession" [ngModelOptions]="{standalone: true}"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='experince'
+/>
+
+<input type="text" [(ngModel)]="user.nationaid" [ngModelOptions]="{standalone: true}"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='National Id'
+ />
+<input type="text" [(ngModel)]="user.education" [ngModelOptions]="{standalone: true}" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Education'
+/>
+<input type="text"  [(ngModel)]="user.adresse" [ngModelOptions]="{standalone: true}" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Adresse'
+/>
+<input type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"  class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block  p-2.5 cursor-pointer" placeholder='Email adresse'
+/>
+<button type="submit" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
+    
+    <i class="bi bi-person-plus w-6 h-6 mr-2"></i>
+    Submit
+  </button>
+</div>
+</form>
+

@@ -1,0 +1,61 @@
+
+ <div class="grid lg:grid-cols-2  gap-4 mb-4">
+     
+<div *ngFor="let classroom of Classes" class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Nom de Classe 
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Matiere
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Note 
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let matiere of classroom.matieres" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{classroom.name}}
+                </th>
+                <td  class="px-6 py-4">
+                    {{matiere.name}}
+                </td>
+                <td class="px-6 py-4">
+                    {{matiere.note}}
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex  space-x-3">
+                        <i class="bi bi-pencil text-blue-500 cursor-pointer"></i>
+                        <i class="bi bi-trash3 text-red-500 cursor-pointer"></i>
+                    </div>
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+     
+        </div>
+        <div  class="grid lg:grid-cols-4  gap-4 mb-4">
+        <div routerLink="/addmta" class="flex flex-col justify-center items-center h-40 rounded-xl cursor-pointer bg-pink-400">
+            <p class=" text-3xl text-white">
+             <i class="bi bi-plus text-3xl"></i>
+               </p>
+               <p class="text-white text-xl">Ajouter Matiere</p>
+            </div>
+        </div>
+
+        
+
+  

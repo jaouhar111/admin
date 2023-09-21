@@ -1,0 +1,67 @@
+
+
+
+
+<div  class="flex justify-center overflow-x-auto mt-4">
+    <table class="w-92 text-sm text-left text-gray-500">
+        <thead class="text-xs  text-black uppercase bg-slate-200 ">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                  ID	
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Photo
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    NOM D'EMPLOYEE
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    PROFESSION
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees"   class=" border-b ">
+                <th scope="row" class="px-6 py-4 font-medium  whitespace-nowrap text-black">
+                   {{employee._id | slice:1:8}}
+                </th>
+                <td class="px-6 py-4">
+                <img class="w-10 h-10 rounded-full" src="assets/images/avatar.png" alt="Rounded avatar"/>
+                </td>
+                <td class="px-6 py-4">
+                    {{employee.name}}
+                </td>
+                <td class="px-6 py-4">
+                    {{employee.role}}
+                </td>
+                <td class="px-6 py-4">
+                    
+<div class="flex">
+    <div class="flex items-center mr-4">
+        <input [ngModelOptions]="{ standalone: true }"[(ngModel)]="selectedStatus[employee._id]" id="{{ 'radio-' + employee._id }}" type="radio" value="Present" name="{{ 'radio-group-' + employee._id }}" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 "/>
+        <label for="{{ 'radio-' + employee._id }}" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">P</label>
+    </div>
+    <div class="flex items-center mr-4">
+        <input [ngModelOptions]="{ standalone: true }"[(ngModel)]="selectedStatus[employee._id]" id="{{ 'radio-2-' + employee._id }}" type="radio" value="Late" name="{{ 'radio-group-' + employee._id }}" class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500 dark:focus:ring-blue-600 "/>
+        <label for="{{ 'radio-2-' + employee._id }}" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">L</label>
+    </div>
+    <div class="flex items-center mr-4">
+        <input  [ngModelOptions]="{ standalone: true }"[(ngModel)]="selectedStatus[employee._id]"  id="{{ 'radio-3-' + employee._id }}" type="radio" value="Absent" name="{{ 'radio-group-' + employee._id }}" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 "/>
+        <label for="{{ 'radio-3-' + employee._id }}" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">A</label>
+    </div>
+    </div>  
+        </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="flex items-center justify-center mt-8">
+    <button type="button" (click)="onAdd()" class="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
+        Enregistrer
+      </button>
+</div>
+
+

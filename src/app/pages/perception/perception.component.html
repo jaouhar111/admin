@@ -1,0 +1,136 @@
+<div class="flex flex-col">
+    <p class="text-center text-blue-500 text-2xl font-bold py-4">Collection des frais</p>
+    <div class="flex justify-between">
+        <div>
+            <h3 class="text-center">Register</h3>
+            <p class="text-center">{{data.register}}</p>
+        </div>
+        <div>
+            <h3 class="text-center">Nom</h3>
+            <p class="text-center">{{data.name}}</p>
+        </div>
+        <div>
+            <h3 class="text-center">Pere</h3>
+            <p class="text-center">{{data.father}}</p>
+        </div>
+        <div>
+            <h3 class="text-center">Classe</h3>
+            <p class="text-center">Perception des frais</p>
+        </div>
+    </div>
+    <div class="flex justify-between my-4">
+        <div >
+            <label class="" for="">DATE DE PAYMENT</label>
+<div class="relative max-w-sm">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+        </svg>
+    </div>
+    <input datepicker datepicker-format="yyyy/mm/dd" [(ngModel)]="today" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+  </div>
+        </div>
+        <div>
+            <label for="">MOIS DE FRAIS</label>
+            <div class="relative max-w-sm">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                   <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
+                </div>
+                <input datepicker datepicker-format="MM" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+              </div>
+        </div>
+    </div>
+    
+<div class="flex overflow-x-auto justify-center items-center mt-8 ">
+    <table class="w-9/12 text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                
+                <th scope="col" class="px-6 py-3 rounded-l-lg">
+                    SR.NO.
+                </th>
+                <th scope="col" class="px-6 py-3">
+                   DETAILS
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-r-lg">
+                    MONTANT
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   1
+                </th>
+                <td class="px-6 py-4">
+                    REDEVANCE MENSUELLE
+                </td>
+                <td class="px-6 py-4 w-40">
+                    <div>
+                        
+                        <input type="text" [(ngModel)]="mens" id="small-input" class="block w-full p-2  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    2
+                </th>
+                <td class="px-6 py-4">
+                    FRAIS D'INSCRIPTION
+                </td>
+                <td class="px-6 py-4 w-40">
+                    <input type="text" [(ngModel)]="insc" id="small-input" class="block w-full p-2  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    3
+                </th>
+                <td class="px-6 py-4">
+                    TRANSPORT
+                </td>
+                <td class="px-6 py-4">
+                    <input type="text" [(ngModel)]="trsp" id="small-input" class="block w-full p-2  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    4
+                </th>
+                <td class="px-6 py-4">
+                    UNIFORM
+                </td>
+                <td class="px-6 py-4">
+                    <input type="text" [(ngModel)]="uni" id="small-input" class="block w-full p-2  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    5
+                </th>
+                <td class="px-6 py-4">
+                    MATÉRIEL D'ART
+                </td>
+                <td class="px-6 py-4">
+                    <input type="text" [(ngModel)]="art" id="small-input" class="block w-full p-2  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="font-semibold text-gray-900 dark:text-white">
+                <th scope="row" class="px-6 py-3 text-base">
+                    <button type="button" (click)="totalTTc()" class="text-black bg-white font-medium  text-sm ">
+                        TOTALE
+                      </button>
+                </th>
+                <td class="px-6 py-3">3</td>
+                <td class="px-6 py-3">{{total}}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</div>

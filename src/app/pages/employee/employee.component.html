@@ -1,0 +1,29 @@
+<div class='lg:flex lg:flex-row sm:items-center sm:flex-col pb-4 lg:justify-between'>
+    <div class="relative mb-6 w-52">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+          <i class="bi bi-search w-4 h-4 text-gray-500 text-sm"></i>
+        </div>
+        <input (input)="filterByName()" [(ngModel)]="emp" type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Chercher Employee">
+      </div>
+    
+    </div>
+    
+    <div class="grid lg:grid-cols-4 items-center gap-4 mb-4">
+        
+<div *ngFor="let item of filteredList" class="w-full max-w-sm bg-white border border-gray-200 rounded-xl shadow">
+<div class="flex flex-col col-span-1 items-center py-4">
+<img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="assets/images/avatar.png" alt="Bonnie image"/>
+<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{item.name}}</h5>
+<span class="text-sm text-gray-500 dark:text-gray-400">{{item.role}}</span>
+<div class="flex mt-4 space-x-3 md:mt-6">
+    <div  class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-slate-400 rounded-full hover:bg-slate-600 cursor-pointer"><i class="bi bi-search"></i></div> 
+    <div  class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-blue-500 rounded-full hover:bg-blue-700 cursor-pointer"><i class="bi bi-pencil"></i></div>
+    <div  class="inline-flex items-center px-2 py-1 text-sm font-medium text-center text-white bg-red-500 rounded-full hover:bg-red-600 cursor-pointer"><i class="bi bi-trash3"></i></div>
+</div>
+</div>
+</div>
+<div routerLink="/empads" class="bg-purple-700  rounded-full flex justify-center items-center h-40 w-40  text-white cursor-pointer">
+    <i class="bi bi-plus text-3xl"></i>
+</div>
+
+    </div>

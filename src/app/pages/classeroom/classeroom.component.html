@@ -1,0 +1,33 @@
+<div class='flex w-52 mb-8'>
+        
+   <label for="underline_select" class="sr-only">Underline select</label>
+   <select id="underline_select" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+       <option selected>choisir une salle de classe</option>
+       <option value="US">United States</option>
+       <option value="CA">Canada</option>
+       <option value="FR">France</option>
+       <option value="DE">Germany</option>
+   </select>
+   
+       </div>
+<div class="grid lg:grid-cols-4  gap-4 mb-4">
+    <div *ngFor="let item of Classes" class="flex flex-col h-40  rounded-xl cursor-pointer bg-blue-400">
+       <p class="text-xl text-white pl-4 pt-6 ">
+             {{item.name}}
+          </p>
+          <div class="flex justify-between text-white px-6 pt-4">
+            <i class="bi bi-box text-3xl"></i>
+              
+          </div>
+          <div class="flex justify-between px-4 pt-4">
+              <p class="text-white text-md">Student</p>
+              <p class="text-md text-white">{{item.students.length}}</p>
+          </div>
+       </div>
+    <div routerLink="/addcla" class="flex flex-col justify-center items-center h-40 rounded-xl cursor-pointer bg-pink-400">
+       <p class=" text-3xl text-white">
+        <i class="bi bi-plus text-3xl"></i>
+          </p>
+          
+       </div>
+       </div>
